@@ -1,6 +1,8 @@
 pipeline {
   agent {
     kubernetes {
+      label 'promo-app'  // all your pods will be named with this prefix, followed by a unique id
+      defaultContainer 'maven' 
       yaml """
 apiVersion: v1
 kind: Pod
