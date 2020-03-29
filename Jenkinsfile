@@ -17,7 +17,7 @@ pipeline {
       steps {
         container('docker') {  
           sh "docker build -t vividlukeloresch/promo-app:dev ."  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
-          println("did a docker build")
+          println("really????")
         }
       }
     }
